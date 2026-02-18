@@ -1,5 +1,7 @@
 # racePromises
 
+A utility that runs async tasks in parallel and returns the first one that succeeds — automatically retrying if something goes wrong.
+
 ## What is this?
 
 When you call something slow — like an LLM API — things can go wrong in two ways:
@@ -10,6 +12,14 @@ When you call something slow — like an LLM API — things can go wrong in two 
 `racePromises` handles both. You give it a function that creates a promise (your API call), tell it how many attempts to allow and how long to wait before firing off the next one, and it takes care of the rest. The first successful result wins.
 
 > **Important:** This pattern works best for **idempotent** operations (e.g. reads, LLM inference). For writes or operations with side effects, launching duplicate requests can cause problems.
+
+---
+
+## Installation
+
+```sh
+npm i @pico-brief/race-promises
+```
 
 ---
 

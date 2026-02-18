@@ -1,7 +1,7 @@
 {
-  "name": "race-promises",
-  "version": "1.0.0",
-  "description": "Async task runner with staggered retries and parallel racing",
+  "name": "@pico-brief/race-promises",
+  "version": "1.0.1",
+  "description": "A utility that runs async tasks in parallel and returns the first one that succeeds — automatically retrying if something goes wrong.",
   "type": "module",
   "main": "./dist/racePromises.js",
   "types": "./dist/racePromises.d.ts",
@@ -19,7 +19,11 @@
     "test": "node --test racePromises.test.ts",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PicoBrief/race-promises"
+    },
+    "keywords": [
     "retry",
     "race",
     "promises",
