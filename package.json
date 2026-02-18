@@ -1,0 +1,34 @@
+{
+  "name": "race-promises",
+  "version": "1.0.0",
+  "description": "Async task runner with staggered retries and parallel racing",
+  "type": "module",
+  "main": "./dist/racePromises.js",
+  "types": "./dist/racePromises.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/racePromises.js",
+      "types": "./dist/racePromises.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test racePromises.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "retry",
+    "race",
+    "promises",
+    "async",
+    "llm"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "typescript": "^5.0.0"
+  }
+}
